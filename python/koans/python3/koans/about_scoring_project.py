@@ -31,10 +31,35 @@ from runner.koan import *
 # More scoring examples are given in the tests below:
 #
 # Your goal is to write the score method.
+def more_or_value(key, quantity):
+    result = 0
+    if key == 1:
+        result += quantity * 100
+    elif key == 5:
+        result += quantity * 50
+    return result
 
 def score(dice):
-    # You need to write this method
-    pass
+    total = 0
+    hist = dict()
+    for item in dice:
+        hist[item] = 0
+    for item in dice:
+        hist[item] += 1
+    for key, value in hist.items():
+        more = value - 3
+        if more >= 0:
+            if key == 1:
+                total += 1000
+            else:
+                total += 100 * key
+        if more > 0:
+            total += more_or_value(key, more)
+
+        if value in [1,2]:
+            total += more_or_value(key, value)
+
+    return total
 
 class AboutScoringProject(Koan):
     def test_score_of_an_empty_list_is_zero(self):
