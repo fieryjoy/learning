@@ -20,12 +20,52 @@ from runner.koan import *
 
 class Proxy:
     def __init__(self, target_object):
-        # WRITE CODE HERE
+        object.__setattr__(self, 'message_occurence', {})
+        object.__setattr__(self, '_obj', target_object)
 
-        #initialize '_obj' attribute last. Trust me on this!
-        self._obj = target_object
+    def __getattribute__(self, attr_name):
+        x = object.__getattribute__(self, 'message_occurence')
+        obj = object.__getattribute__(self, '_obj')
 
-    # WRITE CODE HERE
+        if attr_name in dir(obj):
+            if attr_name in x.keys():
+                x[attr_name] += 1
+            else:
+                x[attr_name] = 1
+
+            object.__setattr__(self, 'message_occurence', x)
+            return obj.__getattribute__(attr_name)
+        else:
+            return object.__getattribute__(self, attr_name)
+
+
+    def __setattr__(self, attr_name, value):
+        x = object.__getattribute__(self, 'message_occurence')
+        obj = object.__getattribute__(self, '_obj')
+        if attr_name in dir(obj):
+            if attr_name in x.keys():
+                x[attr_name] += 1
+            else:
+                x[attr_name] = 1
+
+            object.__setattr__(self, 'message_occurence', x)
+            return obj.__setattr__(attr_name, value)
+        else:
+            return object.__setattr__(self, attr_name, value)
+
+    def messages(self):
+        x = object.__getattribute__(self, 'message_occurence')
+        return sorted(x.keys(), reverse=True)
+
+    def number_of_times_called(self, message):
+        x = object.__getattribute__(self, 'message_occurence')
+        if message in x.keys():
+            return x[message]
+        return 0
+
+    def was_called(self, message):
+        x = object.__getattribute__(self, 'message_occurence')
+        return message in x.keys()
 
 # The proxy object should pass the following Koan:
 #
