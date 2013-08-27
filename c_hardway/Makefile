@@ -12,15 +12,20 @@ OBJS = $(patsubst %.c,%.o,$(SRCS))
 
 all: $(OBJS) 
 
+%.o: %.c 
+	$(CC) $(CFLAGS) $(LDFLAGS) $^ -o $@
+
 object.o: object.h object.c
-	$(CC) -c object.h object.c
+	$(CC) $(CFLAGS) $(LDFLAGS) -c $^
 
 ex19.o: object.o ex19.c ex19.h
-	$(CC) $(CFLAGS) $^ -o $@
+	$(CC) $(CFLAGS) $(LDFLAGS) $^ -o $@
 
-%.o: %.c %.h
-	$(CC) $(CFLAGS) $(LDFLAGS) $< -o $@
+ex22.o: ex22.h ex22.c dbg.h
+	$(CC) $(CFLAFS) $(LDFLAGS) -c $^
 
+ex22_main.o: ex22.o ex22_main.c
+	$(CC) $(CFLAFS) $(LDFLAGS) $^ -o $@
 
 clean:
 	$(RM) $(OBJS)	
