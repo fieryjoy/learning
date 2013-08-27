@@ -28,11 +28,13 @@ int main(int argc, char *argv[])
 	set_age(100);
 
 	log_info("My age is now: %d", get_age());
-
+	
 	// test the ratio function static
 	log_info("Ratio at first: %f", update_ratio(2.0));
 	log_info("Ratio again: %f", update_ratio(10.0));
 	log_info("Ratio once more: %f", update_ratio(300.0));
+	*pratio = 50.0;
+	log_info("Ratio from inside update_ratio %lf", *pratio);
 
 	// test the scope demo
 	int count = 4;

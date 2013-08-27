@@ -6,6 +6,8 @@ int THE_SIZE = 1000;
 
 static int THE_AGE = 37; 
 
+double *pratio = 0;
+
 int get_age()
 {
 	return THE_AGE;
@@ -19,6 +21,11 @@ void set_age(int age)
 double update_ratio(double new_ratio)
 {
 	static double ratio = 1.0;
+
+	if (pratio == NULL)
+	{
+		pratio = &ratio;
+	}
 
 	double old_ratio = ratio;
 	ratio = new_ratio;

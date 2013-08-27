@@ -3,6 +3,7 @@
 
 // makes THE_SIZE in ex22.c available to other .c files
 extern int THE_SIZE;
+extern double *pratio;
 
 // gets and sets an internal static variable in ex22.c
 int get_age();

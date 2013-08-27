@@ -27,5 +27,12 @@ ex22.o: ex22.h ex22.c dbg.h
 ex22_main.o: ex22.o ex22_main.c
 	$(CC) $(CFLAFS) $(LDFLAGS) $^ -o $@
 
+static.o: static.c static.h
+	$(CC) $(CFLAFS) $(LDFLAGS) -c $^ 
+
+static_main.o: static.o static_main.c
+	$(CC) $(CFLAFS) $(LDFLAGS) $^ -o $@
+
+
 clean:
 	$(RM) $(OBJS)	
