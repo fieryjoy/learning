@@ -35,4 +35,4 @@ static_main.o: static.o static_main.c
 
 
 clean:
-	$(RM) $(OBJS)	
+	$(RM) $(OBJS) *.gch	

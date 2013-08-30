@@ -1,6 +1,14 @@
 #include <stdio.h>
 #include <string.h>
+#include <time.h>
+#include <stdlib.h>
+
 #include "dbg.h"
+clock_t startm, stopm;
+
+#define START if ( (startm = clock()) == -1) {log_err("Error calling clock");exit(1);}
+#define STOP if ( (stopm = clock()) == -1) {log_err("Error calling clock");exit(1);}
+#define PRINTTIME log_info( "%6.100f seconds used by the processor.", ((double)stopm-startm)/CLOCKS_PER_SEC);
 
 int normal_copy(char *from, char *to, int count)
 {
@@ -15,12 +23,16 @@ int normal_copy(char *from, char *to, int count)
 int duffs_device(char *from, char *to, int count)
 {
 	{
-		int n = (count + 3) / 4;
+		int n = (count + 7) / 8;
 		
-		switch(count % 4) {
+		switch(count % 8) {
 			case 0: do {
 				*to++ = *from++;
 				log_info("%d", n);
+				case 7: *to++ = *from++;
+				case 6: *to++ = *from++;
+				case 5: *to++ = *from++;
+				case 4: *to++ = *from++;
 				case 3: *to++ = *from++;
 				case 2: *to++ = *from++;
 				case 1: *to++ = *from++;
@@ -39,6 +51,7 @@ int zeds_device(char *from, char *to, int count)
 		switch(count % 8) {
 			case 0: 
 				again: *to++ = *from++;
+				log_info("%d", n);
 
 				case 7: *to++ = *from++;
 				case 6: *to++ = *from++;
@@ -79,27 +92,36 @@ int main(int argc, char *argv[])
 	memset(to, 'y', 1000);
 	check(valid_copy(to, 1000, 'y'), "Not initialized right.");
 
+	START;
 	// use normal copy to
 	rc = normal_copy(from, to, 1000);
 	check(rc == 1000, "Normal copy failed: %d", rc);
 	check(valid_copy(to, 1000, 'x'), "Normal copy failed.");
+	STOP;
+	PRINTTIME;
 
 	// reset
 	memset(to, 'y', 1000);
-
+	
+	START;
 	// duffs version
 	rc = duffs_device(from, to, 1000);
 	check(rc == 1000, "Duff's device failed: %d", rc);
 	check(valid_copy(to, 1000, 'x'), "Duffs's device failed copy.");
-
+	STOP;
+	PRINTTIME;
+	
 	// reset
 	memset(to, 'y', 1000);
 
+	START;
 	// my version
 	rc = zeds_device(from, to, 1000);
 	check(rc == 1000, "Zed's device failed: %d", rc);
 	check(valid_copy(to, 1000, 'x'), "Zed's device failed copy.");
-	
+	STOP;
+	PRINTTIME;
+
 	return 0;
 error:
 	return 1;
