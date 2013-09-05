@@ -3,6 +3,7 @@ Create a virtual environment for this project
 mkdir ~/vedj/
 virtualenv ~/vedj --no-site-packages
 source ~/vedj/bin/activate
+pip install -r REQUIREMENTS
 
 Start project
 django-admin startproject eris
