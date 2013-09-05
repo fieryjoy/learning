@@ -1,0 +1,8 @@
+Create a virtual environment for this project
+
+mkdir ~/vedj/
+virtualenv ~/vedj --no-site-packages
+source ~/vedj/bin/activate
+
+Start project
+django-admin startproject eris
