@@ -1,0 +1,19 @@
+from los.lo import LO
+from tastypie import Resource, fields, Authorization
+
+
+class LOResource(Resource):
+    pk = fields.IntegerField(attribute='pk')
+    title = fields.CharField(attribute='title')
+    description = fields.CharField(attribute='description')
+
+    class Meta:
+        resource_name = 'lo'
+        object_class = LO
+        authorization = Authorization()
+
+    def detail_uri_kwargs(self, bundle_or_obj):
+        kwargs = {}
+
+        if isinstance(bundle_or_obj, Bundle):
+            kwargs['pk'] = bundle_or_obj.obj.pk
