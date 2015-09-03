@@ -1,0 +1,13 @@
+---
+initializers:
+  :c:
+    :platform: :ruby
+workers:
+  :a:
+    :platform: :ruby
+    :machines: 1
+    :processes: 2
+  :b:
+    :platform: :ruby
+    :machines: 1
+    :processes: 2
