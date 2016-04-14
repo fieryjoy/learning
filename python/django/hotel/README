@@ -1,0 +1,36 @@
+This project is written in Python with Django web framework.
+
+Install needed software:
+sudo apt-get install python, python-dev, python-setuptools, virtualenv, virtualenvwrapper, sqlite
+sudo apt-get install libmysqlclient-dev
+sudo apt-get install mysql-server
+
+Create database:
+mysql -u root -p -e "CREATE DATABASE tank CHARACTER SET utf8 COLLATE utf8_general_ci;"
+
+
+For virtualenvwrapper visibility add this in your profile:
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/hotel
+source /usr/local/bin/virtualenvwrapper.sh
+
+Create a new virtual env:
+mkvirtualenv venv
+
+Go into the project directory:
+cd hotel
+
+Install needed packages for this project:
+make all
+
+Start development server:
+python manage.py runserver
+
+For the admin side, create a superuser
+python manage.py createsuperuser
+
+ADMIN:
+http://127.0.0.1:8000/admin/
+
+ACTUAL SITE:
+http://127.0.0.1:8000

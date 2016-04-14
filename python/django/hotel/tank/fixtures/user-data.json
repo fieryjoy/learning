@@ -1,0 +1,19 @@
+[    {
+        "fields": {
+            "date_joined": "2015-05-24T08:17:17.321Z",
+            "email": "alina.ghergu@gmail.com",
+            "first_name": "",
+            "groups": [],
+            "is_active": true,
+            "is_staff": true,
+            "is_superuser": true,
+            "last_login": "2015-05-24T16:14:18.986Z",
+            "last_name": "",
+            "password": "pbkdf2_sha256$20000$ipRQuqEBKh66$6eiKlIX/bo8iAd5TUzHqaEm/K47UyQ8kqEkgyb0q0Aw=",
+            "user_permissions": [],
+            "username": "alice"
+        },
+        "model": "auth.user",
+        "pk": 1
+    }
+]

@@ -1,0 +1,407 @@
+[
+    {
+        "fields": {
+            "address": "St. Ploiesti 1C, Timisoara, Timis, Romania",
+            "email": "cornel@rabdare.com",
+            "first_name": "Cornel",
+            "last_name": "Rabdare",
+            "title": "Mr"
+        },
+        "model": "tank.visitor",
+        "pk": 3
+    },
+    {
+        "fields": {
+            "address": "Las Vegas",
+            "email": "lola@falana.com",
+            "first_name": "Lola",
+            "last_name": "Falana",
+            "title": "Mrs"
+        },
+        "model": "tank.visitor",
+        "pk": 4
+    },
+    {
+        "fields": {
+            "adults": 1,
+            "check_in": "2015-05-24",
+            "check_out": "2015-05-25",
+            "children": 0,
+            "confirmed": true,
+            "number_of_rooms": 1,
+            "room_type": "DOUBLE",
+            "smoking": false,
+            "visitor": null
+        },
+        "model": "tank.reservation",
+        "pk": 2
+    },
+    {
+        "fields": {
+            "adults": 1,
+            "check_in": "2015-06-09",
+            "check_out": "2015-06-18",
+            "children": 0,
+            "confirmed": false,
+            "number_of_rooms": 1,
+            "room_type": "SINGLE",
+            "smoking": false,
+            "visitor": null
+        },
+        "model": "tank.reservation",
+        "pk": 3
+    },
+    {
+        "fields": {
+            "adults": 1,
+            "check_in": "2015-06-17",
+            "check_out": "2015-06-18",
+            "children": 0,
+            "confirmed": true,
+            "number_of_rooms": 1,
+            "room_type": "QUEEN",
+            "smoking": false,
+            "visitor": null
+        },
+        "model": "tank.reservation",
+        "pk": 4
+    },
+    {
+        "fields": {
+            "adults": 1,
+            "check_in": "2015-06-17",
+            "check_out": "2015-06-24",
+            "children": 0,
+            "confirmed": false,
+            "number_of_rooms": 1,
+            "room_type": "QUEEN",
+            "smoking": false,
+            "visitor": null
+        },
+        "model": "tank.reservation",
+        "pk": 5
+    },
+    {
+        "fields": {
+            "adults": 1,
+            "check_in": "2015-06-09",
+            "check_out": "2015-06-17",
+            "children": 0,
+            "confirmed": false,
+            "number_of_rooms": 1,
+            "room_type": "QUEEN",
+            "smoking": false,
+            "visitor": null
+        },
+        "model": "tank.reservation",
+        "pk": 6
+    },
+    {
+        "fields": {
+            "adults": 1,
+            "check_in": "2015-08-14",
+            "check_out": "2015-07-16",
+            "children": 0,
+            "confirmed": false,
+            "number_of_rooms": 1,
+            "room_type": "QUEEN",
+            "smoking": false,
+            "visitor": null
+        },
+        "model": "tank.reservation",
+        "pk": 7
+    },
+    {
+        "fields": {
+            "adults": 1,
+            "check_in": "2015-06-24",
+            "check_out": "2015-06-25",
+            "children": 0,
+            "confirmed": false,
+            "number_of_rooms": 1,
+            "room_type": "QUEEN",
+            "smoking": false,
+            "visitor": null
+        },
+        "model": "tank.reservation",
+        "pk": 8
+    },
+    {
+        "fields": {
+            "adults": 1,
+            "check_in": "2015-06-10",
+            "check_out": "2015-06-18",
+            "children": 0,
+            "confirmed": false,
+            "number_of_rooms": 1,
+            "room_type": "QUEEN",
+            "smoking": false,
+            "visitor": null
+        },
+        "model": "tank.reservation",
+        "pk": 9
+    },
+    {
+        "fields": {
+            "adults": 1,
+            "check_in": "2015-05-28",
+            "check_out": "2016-02-17",
+            "children": 0,
+            "confirmed": false,
+            "number_of_rooms": 1,
+            "room_type": "QUEEN",
+            "smoking": false,
+            "visitor": null
+        },
+        "model": "tank.reservation",
+        "pk": 10
+    },
+    {
+        "fields": {
+            "adults": 1,
+            "check_in": "2015-05-27",
+            "check_out": "2015-05-30",
+            "children": 0,
+            "confirmed": false,
+            "number_of_rooms": 1,
+            "room_type": "DOUBLE-DOUBLE",
+            "smoking": true,
+            "visitor": null
+        },
+        "model": "tank.reservation",
+        "pk": 11
+    },
+    {
+        "fields": {
+            "adults": 1,
+            "check_in": "2015-06-25",
+            "check_out": "2015-06-29",
+            "children": 0,
+            "confirmed": false,
+            "number_of_rooms": 1,
+            "room_type": "DOUBLE-DOUBLE",
+            "smoking": true,
+            "visitor": null
+        },
+        "model": "tank.reservation",
+        "pk": 12
+    },
+    {
+        "fields": {
+            "adults": 1,
+            "check_in": "2015-06-25",
+            "check_out": "2015-06-29",
+            "children": 0,
+            "confirmed": false,
+            "number_of_rooms": 1,
+            "room_type": "DOUBLE-DOUBLE",
+            "smoking": true,
+            "visitor": null
+        },
+        "model": "tank.reservation",
+        "pk": 13
+    },
+    {
+        "fields": {
+            "adults": 1,
+            "check_in": "2015-06-25",
+            "check_out": "2015-06-29",
+            "children": 0,
+            "confirmed": false,
+            "number_of_rooms": 1,
+            "room_type": "DOUBLE-DOUBLE",
+            "smoking": true,
+            "visitor": null
+        },
+        "model": "tank.reservation",
+        "pk": 14
+    },
+    {
+        "fields": {
+            "adults": 1,
+            "check_in": "2015-06-17",
+            "check_out": "2015-06-25",
+            "children": 0,
+            "confirmed": false,
+            "number_of_rooms": 1,
+            "room_type": "DOUBLE-DOUBLE",
+            "smoking": true,
+            "visitor": null
+        },
+        "model": "tank.reservation",
+        "pk": 15
+    },
+    {
+        "fields": {
+            "adults": 1,
+            "check_in": "2015-06-12",
+            "check_out": "2015-06-26",
+            "children": 0,
+            "confirmed": false,
+            "number_of_rooms": 1,
+            "room_type": "QUEEN",
+            "smoking": false,
+            "visitor": 3
+        },
+        "model": "tank.reservation",
+        "pk": 16
+    },
+    {
+        "fields": {
+            "adults": 1,
+            "check_in": "2015-06-10",
+            "check_out": "2015-06-18",
+            "children": 0,
+            "confirmed": false,
+            "number_of_rooms": 1,
+            "room_type": "QUEEN",
+            "smoking": false,
+            "visitor": 3
+        },
+        "model": "tank.reservation",
+        "pk": 17
+    },
+    {
+        "fields": {
+            "adults": 1,
+            "check_in": "2015-06-10",
+            "check_out": "2015-06-24",
+            "children": 0,
+            "confirmed": false,
+            "number_of_rooms": 1,
+            "room_type": "QUEEN",
+            "smoking": false,
+            "visitor": null
+        },
+        "model": "tank.reservation",
+        "pk": 18
+    },
+    {
+        "fields": {
+            "adults": 1,
+            "check_in": "2015-06-10",
+            "check_out": "2015-06-19",
+            "children": 0,
+            "confirmed": false,
+            "number_of_rooms": 1,
+            "room_type": "QUEEN",
+            "smoking": false,
+            "visitor": null
+        },
+        "model": "tank.reservation",
+        "pk": 19
+    },
+    {
+        "fields": {
+            "adults": 1,
+            "check_in": "2015-06-10",
+            "check_out": "2015-06-18",
+            "children": 0,
+            "confirmed": false,
+            "number_of_rooms": 1,
+            "room_type": "QUEEN",
+            "smoking": false,
+            "visitor": 3
+        },
+        "model": "tank.reservation",
+        "pk": 20
+    },
+    {
+        "fields": {
+            "adults": 1,
+            "check_in": "2015-06-25",
+            "check_out": "2015-06-30",
+            "children": 0,
+            "confirmed": false,
+            "number_of_rooms": 1,
+            "room_type": "QUEEN",
+            "smoking": false,
+            "visitor": 4
+        },
+        "model": "tank.reservation",
+        "pk": 21
+    },
+    {
+        "fields": {
+            "adults": 1,
+            "check_in": "2015-05-25",
+            "check_out": "2015-05-27",
+            "children": 0,
+            "confirmed": false,
+            "number_of_rooms": 1,
+            "room_type": "QUEEN",
+            "smoking": false,
+            "visitor": 4
+        },
+        "model": "tank.reservation",
+        "pk": 22
+    },
+    {
+        "fields": {
+            "capacity": 4,
+            "floor_number": 1,
+            "price": "35.50",
+            "reserved": false,
+            "room_number": 1,
+            "room_type": "QUEEN",
+            "smoking": false
+        },
+        "model": "tank.room",
+        "pk": 2
+    },
+    {
+        "fields": {
+            "capacity": 2,
+            "floor_number": 1,
+            "price": "200.00",
+            "reserved": true,
+            "room_number": 2,
+            "room_type": "QUEEN",
+            "smoking": false
+        },
+        "model": "tank.room",
+        "pk": 3
+    },
+    {
+        "fields": {
+            "capacity": 2,
+            "floor_number": 1,
+            "price": "45.00",
+            "reserved": true,
+            "room_number": 3,
+            "room_type": "QUEEN",
+            "smoking": false
+        },
+        "model": "tank.room",
+        "pk": 4
+    },
+    {
+        "fields": {
+            "capacity": 2,
+            "floor_number": 1,
+            "price": "53.00",
+            "reserved": false,
+            "room_number": 7,
+            "room_type": "DOUBLE-DOUBLE",
+            "smoking": true
+        },
+        "model": "tank.room",
+        "pk": 5
+    },
+    {
+        "fields": {
+            "reservation": 4,
+            "room": 3
+        },
+        "model": "tank.roomreservation",
+        "pk": 2
+    },
+    {
+        "fields": {
+            "reservation": 2,
+            "room": 4
+        },
+        "model": "tank.roomreservation",
+        "pk": 3
+    }
+]

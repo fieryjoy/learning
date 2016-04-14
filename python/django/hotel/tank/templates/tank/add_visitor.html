@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+   <body>
+        <h1>Add Visitor</h1>
+
+        <form id="visitor_form" method="post" action="/add_visitor/">
+          {% csrf_token %}
+          <table>
+            <div style='color:red'>{{form.errors}}</div>
+            {% for field in form %}
+              <tr>
+                {{ field.errors }}
+                <td>{{ field.label_tag }}</td><td>{{ field }}</td>
+              </tr>
+            {% endfor %}
+          </table>
+          <input type="submit" name="submit" value="Check" />
+        </form>
+    </body>
+
+</html>
