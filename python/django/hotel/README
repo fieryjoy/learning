@@ -1,7 +1,7 @@
 This project is written in Python with Django web framework.
 
 Install needed software:
-sudo apt-get install python, python-dev, python-setuptools, virtualenv, virtualenvwrapper, sqlite
+sudo apt-get install python python-dev python-setuptools virtualenv virtualenvwrapper sqlite
 sudo apt-get install libmysqlclient-dev
 sudo apt-get install mysql-server
 
