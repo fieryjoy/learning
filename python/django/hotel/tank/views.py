@@ -7,22 +7,27 @@ from django.template.context_processors import csrf
 from tank.forms import ReservationForm, VisitorForm
 from tank.models import Room, Visitor, Reservation
 
+
 def index(request):
     context = {}
     return render(request, 'tank/index.html', context)
+
 
 def success(request):
     context = {}
     return render(request, 'tank/success.html', context)
 
+
 def failed(request):
     context = {}
     return render(request, 'tank/failed.html', context)
+
 
 def detail(request, room_id):
     room = get_object_or_404(Room, pk=room_id)
     context = {'room': room}
     return render(request, 'tank/detail.html', context)
+
 
 def add_reservation(request):
     context = {}
@@ -40,6 +45,7 @@ def add_reservation(request):
     context.update(csrf(request))
     context['form'] = form
     return render(request, 'tank/add_reservation.html', context)
+
 
 def add_visitor(request):
     context = {}

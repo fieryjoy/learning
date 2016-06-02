@@ -17,6 +17,7 @@ def make_custom_datefield(f, **kwargs):
 
 class ReservationForm(forms.ModelForm):
     formfield_callback = make_custom_datefield
+
     class Meta:
         model = Reservation
         fields = ('check_in', 'check_out', 'room_type', 'adults', 'children', 'smoking', 'number_of_rooms',)
