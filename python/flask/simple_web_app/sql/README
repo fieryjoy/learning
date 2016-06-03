@@ -1,0 +1,4 @@
+mysql -u root < create_database.sql
+mysql -u root < create_users_table.sql
+mysql -u root < sql/sp_createUser.sql
+mysql -u root < sql/sp_validate_login.sql
