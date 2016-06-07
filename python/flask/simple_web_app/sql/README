@@ -2,3 +2,9 @@ mysql -u root < create_database.sql
 mysql -u root < create_users_table.sql
 mysql -u root < sql/sp_createUser.sql
 mysql -u root < sql/sp_validate_login.sql
+mysql -u root < sql/create_tbl_wish.sql
+mysql -u root < sql/sp_addWish.sql
+mysql -u root < sql/sp_GetWishByUser.sql
+mysql -u root < sql/sp_GetWishById.sql
+mysql -u root < sql/sp_updateWish.sql
+mysql -u root < sql/sp_deleteWish.sql
