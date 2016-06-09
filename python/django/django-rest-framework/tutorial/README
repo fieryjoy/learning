@@ -1,0 +1,29 @@
+Set Python environment with pyenv
+https://github.com/yyuu/pyenv
+https://godjango.com/96-django-and-python-3-how-to-setup-pyenv-for-multiple-pythons/
+
+
+# Get Code
+git clone https://github.com/yyuu/pyenv.git ~/.pyenv
+
+# Set the Paths
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+
+# Initialize pyenv on load of terminal
+echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+
+# Restart Shell
+
+# install python
+pyenv install 3.5.1
+
+# set python version for current and all sub directories
+pyenv local 3.5.1
+
+If some errors appear try the install the following libs:
+- build-essential libssl-devel zlib1g-devel libbz2-devel libreadline-devel libsqlite3-devel wget curl llvm libncurses5-devel libncursesw5-devel
+Then uninstall python using pyenv and install it again.
+
+pip install -r requirements.txt
+
