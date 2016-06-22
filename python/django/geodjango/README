@@ -1,0 +1,12 @@
+Get the database docker with everything in place:
+http://www.oslandia.com/full-spatial-database-power-in-2-lines-en.html
+
+sudo docker run --rm -P --name pggis_test oslandia/pggis /sbin/my_init
+
+get port with:
+docker ps
+
+psql -h localhost -p 32768 -U pggis -W pggis
+
+Follow the tutorial from geodjango:
+https://docs.djangoproject.com/en/1.9/ref/contrib/gis/tutorial/
