@@ -76,11 +76,12 @@ WSGI_APPLICATION = 'composeexample.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'HOST': 'db',
-        'PORT': 5432,
+        'ENGINE': 'django.db.backends.oracle',
+        'NAME': 'XE',
+        'USER': 'SYSTEM',
+        'PASSWORD': 'oracle',
+        'HOST': '172.17.0.2',
+        'PORT': '1521',
     }
 }
 
