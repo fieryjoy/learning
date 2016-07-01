@@ -75,7 +75,8 @@ WSGI_APPLICATION = 'composeexample.wsgi.application'
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
 DATABASES = {
-    'default': {
+    'default': {},
+    'oracle': {
         'ENGINE': 'django.db.backends.oracle',
         'NAME': 'XE',
         'USER': 'SYSTEM',
