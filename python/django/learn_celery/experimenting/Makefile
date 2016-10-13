@@ -1,15 +1,15 @@
 build_image:
 	docker-compose build
 
-start_container: build_image
+start_rabbitmq: build_image
 	docker-compose up -d
 
-set_broker_url: start_container
-	./set_broker_url.sh
+start_worker:
+	BROKER_URL=amqp://admin:mypass@`docker inspect -f '{{.NetworkSettings.Networks.experimenting_default.IPAddress}}' experimenting_rabbitmq_1`// ./start_worker.sh
 
-start_worker: get_broker_url
-	./start_worker.sh
-
-clean:
+clean: stop_all
 	find . -name *.pyc | xargs rm
 	rmdir __pycache__
+
+stop_rabbitmq:
+	docker-compose stop
