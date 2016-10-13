@@ -1,0 +1,10 @@
+version: '2'
+services:
+  rabbitmq:
+    image: tutum/rabbitmq
+    environment:
+      - RABBITMQ_PASS=mypass
+      - USER=admin
+    expose:
+      - "5672"
+      - "15672"
